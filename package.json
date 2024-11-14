@@ -3,6 +3,7 @@
   "private": true,
   "description": "Tests ability to download and open iModel Briefcase",
   "module": "dist/index.js",
+  "type": "module",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p .",

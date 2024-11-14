@@ -16,7 +16,7 @@ npm install
 npm start
 ```
 
-The script will open your default system web browser to authenticate with your Bentley IMS account. After authenticating, you'll be prompted to enter your iTwinId and iModelId. The script will then download the briefcase and output a JSON summary of the iModel.
+The script will open your default system web browser to authenticate with your Bentley IMS account. After authenticating, you'll be prompted to enter your iTwinId and iModelId. The script will then download the briefcase and output a JSON summary of the iModel. A ssl-issue-{datetime}.log with trace-level logging will also be produced.
 
 If the script fails to download the briefcase due to an invalid cert or SSL error, you may need to set the `NODE_TLS_REJECT_UNAUTHORIZED` environment variable to `0`:
 
@@ -24,4 +24,4 @@ If the script fails to download the briefcase due to an invalid cert or SSL erro
 NODE_TLS_REJECT_UNAUTHORIZED=0 npm start
 ```
 
-If this then succeeds, the underlying issue may be due to a self-signed certificate and/or corporate proxy.
+If this then succeeds, the underlying issue may be due to a self-signed certificate and/or corporate proxy. The logs produced should help us further diagnose the issue.
