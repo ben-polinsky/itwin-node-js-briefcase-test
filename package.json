@@ -1,0 +1,24 @@
+{
+  "name": "cli-briefcase-test",
+  "private": true,
+  "description": "Tests ability to download and open iModel Briefcase",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "npm run build && node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^7.1.0",
+    "@itwin/core-backend": "^4.10.0",
+    "@itwin/core-bentley": "^4.10.0",
+    "@itwin/imodels-access-backend": "^5.2.3",
+    "@itwin/imodels-client-authoring": "^5.9.0",
+    "@itwin/node-cli-authorization": "^2.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
