@@ -6,7 +6,7 @@ import { Logger, LoggingMetaData, LogLevel } from "@itwin/core-bentley";
 import { appendFileSync } from "fs";
 import { input } from "@inquirer/prompts";
 
-const logTime = new Date().toISOString();
+const logTime = new Date().toISOString().replace(/:/g, '-');
 function logCallback(category: string, message: string, metaData: LoggingMetaData) {
     let entry = `${category}: ${message}`;
     if (typeof metaData === "function") {
